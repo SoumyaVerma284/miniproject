@@ -26,7 +26,7 @@ function Component8(){
           console.log("val", val);
 
 
-          axios.get("https://api.openweathermap.org/data/2.5/weather?q=${val}&appid=65302b86406160e5f170c650f23250d0&units=metric")
+          axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${val}&appid=${process.env.REACT_APP_API_KEY}&units=metric`)
               .then((res)=>{ 
                   console.log("Result status", res.data);
 

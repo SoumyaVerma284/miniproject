@@ -26,7 +26,7 @@ function Component9(){
         console.log("I am in call api");
 
 
-        axios.get("https://api.openweathermap.org/data/2.5/weather?q=Nagpur&appid=5dfe7ef8f92d44a1930bf7e6855d8533&units=metric")
+        axios.get("https://api.openweathermap.org/data/2.5/weather?q=Nagpur&appid=${process.env.REACT_APP_API_KEY}&units=metric")
              .then((res)=>{ 
                 console.log("API CAlled", res);
                 console.log("Result status", res.data.wind.speed);
